@@ -1,0 +1,16 @@
+<div class="search-container">
+  <div class="search-box">
+    <input type="text" name="" #searchInput id="input-search">
+    <input type="submit" (click)="search(searchInput.value);" value="Search" id="submit-search">
+  </div>
+</div>
+<div class="result-container">
+  <div class="box" *ngFor="let result of results">
+    <img class="cover-back" src="{{ result.artworkUrl60}}" alt="" srcset="">
+    <img class="cover-front" src="{{ result.artworkUrl100}}" alt="" srcset="">
+    <h3 class="artistname">{{ result.artistName}}</h3>
+    <h3 class="albumname">{{result.collectionName }}</h3>
+    <h3 class="trackname">{{ result.trackName}}</h3>
+  </div>
+
+</div>
